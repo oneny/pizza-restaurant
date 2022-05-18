@@ -1,0 +1,134 @@
+.container {
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+.container .left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .left .imgContainer {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.container .right {
+  flex: 1;
+  padding: 20px;
+}
+
+.container .right .price {
+  color: #d1411e;
+  font-weight: 400;
+  border-bottom: 1px solid #d1411e;
+}
+
+.container .right .sizes {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .right .sizes .size {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .right .sizes .size:nth-child(2) {
+  width: 40px;
+  height: 40px;
+}
+
+.container .right .sizes .size:last-child {
+  width: 50px;
+  height: 50px;
+}
+
+.container .right .sizes .size .number {
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  background-color: teal;
+  color: white;
+  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+.container .right .ingredients {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.container .right .ingredients .option {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.container .right .ingredients .option .checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.container .right .add .quantity {
+  width: 50px;
+  height: 30px;
+}
+
+.container .right .add .button {
+  height: 30px;
+  margin-left: 10px;
+  background-color: #d1411e;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container .right .add .button:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .container .left .imgContainer {
+    width: 70vw;
+    height: 70vw;
+  }
+  .container .right .title {
+    margin: 5px;
+  }
+  .container .right .sizes {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .container .right .ingredients {
+    flex-direction: column;
+  }
+  .container .right .ingredients .option {
+    margin: 10px;
+    font-size: 18px;
+  }
+  .container .right .ingredients .option .checkbox {
+    width: 25px;
+    height: 25px;
+  }
+  .container .right .add .quantity,
+  .container .right .add .button {
+    height: 50px;
+    padding: 5px 20px;
+  }
+}
